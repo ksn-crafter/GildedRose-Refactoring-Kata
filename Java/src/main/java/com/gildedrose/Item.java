@@ -51,4 +51,8 @@ public class Item {
     public boolean isSellInLessThan(int value) {
         return sellIn < value;
     }
+
+    public void decreementSellIn() {
+        sellIn = sellIn - 1;
+    }
 }
