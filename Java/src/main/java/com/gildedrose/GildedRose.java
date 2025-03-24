@@ -13,7 +13,7 @@ class GildedRose {
                     && !items[i].isBackstagePasses()) {
                 if (items[i].isQualityGreaterThanZero()) {
                     if (!items[i].isSulfuras()) {
-                        decreementQuality(items[i]);
+                        items[i].decreementQuality();
                     }
                 }
             } else {
@@ -45,7 +45,7 @@ class GildedRose {
                     if (!items[i].isBackstagePasses()) {
                         if (items[i].isQualityGreaterThanZero()) {
                             if (!items[i].isSulfuras()) {
-                                decreementQuality(items[i]);
+                                items[i].decreementQuality();
                             }
                         }
                     } else {
@@ -58,10 +58,6 @@ class GildedRose {
                 }
             }
         }
-    }
-
-    private static void decreementQuality(Item item) {
-        item.quality = item.quality - 1;
     }
 
 }

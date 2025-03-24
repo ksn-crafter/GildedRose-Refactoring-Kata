@@ -35,4 +35,8 @@ public class Item {
     public boolean isQualityGreaterThanZero() {
         return quality > 0;
     }
+
+    public void decreementQuality() {
+        quality = quality - 1;
+    }
 }
