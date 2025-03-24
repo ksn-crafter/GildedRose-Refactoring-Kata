@@ -17,18 +17,18 @@ class GildedRose {
                     }
                 }
             } else {
-                if (isQualityLessThanFifty(i)) {
+                if (isQualityLessThanFifty(items[i])) {
                     items[i].quality = items[i].quality + 1;
 
                     if (items[i].isBackstagePasses()) {
                         if (items[i].sellIn < 11) {
-                            if (isQualityLessThanFifty(i)) {
+                            if (isQualityLessThanFifty(items[i])) {
                                 items[i].quality = items[i].quality + 1;
                             }
                         }
 
                         if (items[i].sellIn < 6) {
-                            if (isQualityLessThanFifty(i)) {
+                            if (isQualityLessThanFifty(items[i])) {
                                 items[i].quality = items[i].quality + 1;
                             }
                         }
@@ -52,7 +52,7 @@ class GildedRose {
                         items[i].quality = items[i].quality - items[i].quality;
                     }
                 } else {
-                    if (isQualityLessThanFifty(i)) {
+                    if (isQualityLessThanFifty(items[i])) {
                         items[i].quality = items[i].quality + 1;
                     }
                 }
@@ -60,8 +60,8 @@ class GildedRose {
         }
     }
 
-    private boolean isQualityLessThanFifty(int i) {
-        return items[i].quality < 50;
+    private static boolean isQualityLessThanFifty(Item item) {
+        return item.quality < 50;
     }
 
 }
