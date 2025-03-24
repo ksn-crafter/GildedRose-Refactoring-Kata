@@ -39,4 +39,8 @@ public class Item {
     public void decreementQuality() {
         quality = quality - 1;
     }
+
+    public boolean isQualityLessThanFifty() {
+        return quality < 50;
+    }
 }
