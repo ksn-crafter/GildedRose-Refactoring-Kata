@@ -60,7 +60,7 @@ class GildedRose {
         }
     }
 
-    private void reduceQualityBy(Item item, int value) {
+    private static void reduceQualityBy(Item item, int value) {
         item.quality = item.quality - value;
     }
 
