@@ -3,7 +3,7 @@ package com.gildedrose;
 public class Item {
 
     //inappropriate intimacy
-    public String name;
+    private String name;
 
     public int sellIn;
 
