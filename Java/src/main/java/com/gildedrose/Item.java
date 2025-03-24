@@ -5,7 +5,7 @@ public class Item {
     //inappropriate intimacy
     private String name;
 
-    public int sellIn;
+    private int sellIn;
 
     public int quality;
 
