@@ -49,7 +49,7 @@ class GildedRose {
                             }
                         }
                     } else {
-                        items[i].reduceQualityBy(items[i].quality);
+                        items[i].reduceQualityToZero();
                     }
                 } else {
                     if (items[i].isQualityLessThanFifty()) {

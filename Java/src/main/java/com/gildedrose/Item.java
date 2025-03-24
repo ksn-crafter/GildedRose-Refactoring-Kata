@@ -56,7 +56,7 @@ public class Item {
         sellIn = sellIn - 1;
     }
 
-    public void reduceQualityBy(int value) {
-        quality = quality - value;
+    public void reduceQualityToZero() {
+        quality = 0;
     }
 }
