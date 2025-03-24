@@ -2,7 +2,6 @@ package com.gildedrose;
 //Data class
 public class Item {
 
-    //inappropriate intimacy
     private String name;
 
     private int sellIn;
