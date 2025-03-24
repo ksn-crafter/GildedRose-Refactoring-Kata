@@ -15,7 +15,11 @@ public class Item {
         this.quality = quality;
     }
 
-   @Override
+    public boolean isAgedBrie() {
+        return name.equals("Aged Brie");
+    }
+
+    @Override
    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
