@@ -47,4 +47,8 @@ public class Item {
     public void increementQuality() {
         quality = quality + 1;
     }
+
+    public boolean isSellInLessThan(int value) {
+        return sellIn < value;
+    }
 }
