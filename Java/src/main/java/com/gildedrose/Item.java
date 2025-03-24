@@ -43,4 +43,8 @@ public class Item {
     public boolean isQualityLessThanFifty() {
         return quality < 50;
     }
+
+    public void increementQuality() {
+        quality = quality + 1;
+    }
 }
