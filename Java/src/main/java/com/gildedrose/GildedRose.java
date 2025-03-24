@@ -21,13 +21,13 @@ class GildedRose {
                     items[i].increementQuality();
 
                     if (items[i].isBackstagePasses()) {
-                        if (isSellInLessThan(i,11)) {
+                        if (isSellInLessThan(11, items[i])) {
                             if (items[i].isQualityLessThanFifty()) {
                                 items[i].increementQuality();
                             }
                         }
 
-                        if (isSellInLessThan(i,6)) {
+                        if (isSellInLessThan(6, items[i])) {
                             if (items[i].isQualityLessThanFifty()) {
                                 items[i].increementQuality();
                             }
@@ -40,7 +40,7 @@ class GildedRose {
                 items[i].sellIn = items[i].sellIn - 1;
             }
 
-            if (isSellInLessThan(i,0)) {
+            if (isSellInLessThan(0, items[i])) {
                 if (!items[i].isAgedBrie()) {
                     if (!items[i].isBackstagePasses()) {
                         if (items[i].isQualityGreaterThanZero()) {
@@ -60,8 +60,8 @@ class GildedRose {
         }
     }
 
-    private boolean isSellInLessThan(int i,int value) {
-        return items[i].sellIn < value;
+    private static boolean isSellInLessThan(int value, Item item) {
+        return item.sellIn < value;
     }
 
 }
