@@ -1,5 +1,5 @@
 package com.gildedrose;
-//Data class
+
 public class Item {
 
     private String name;
