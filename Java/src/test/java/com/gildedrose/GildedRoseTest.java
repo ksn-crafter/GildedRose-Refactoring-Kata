@@ -3,6 +3,7 @@ package com.gildedrose;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class GildedRoseTest {
 
@@ -17,7 +18,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertEquals(1,items[0].quality);
+        assertTrue(items[0].isQualityEqualTo(1));
     }
 
     @Test
@@ -29,7 +30,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertEquals(0,items[0].quality);
+        assertTrue(items[0].isQualityEqualTo(0));
     }
 
     @Test
@@ -41,7 +42,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertEquals(0,items[0].quality);
+        assertTrue(items[0].isQualityEqualTo(0));
     }
 
     @Test
@@ -53,7 +54,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertEquals(0,items[0].quality);
+        assertTrue(items[0].isQualityEqualTo(0));
     }
 
     @Test
@@ -65,7 +66,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertEquals(50,items[0].quality);
+        assertTrue(items[0].isQualityEqualTo(50));
     }
 
     @Test
@@ -77,7 +78,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertEquals(22,items[0].quality);
+        assertTrue(items[0].isQualityEqualTo(22));
     }
 
     @Test
@@ -89,7 +90,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertEquals(23,items[0].quality);
+        assertTrue(items[0].isQualityEqualTo(23));
     }
 
     @Test
@@ -101,7 +102,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertEquals(0,items[0].quality);
+        assertTrue(items[0].isQualityEqualTo(0));
     }
 
     @Test
@@ -115,7 +116,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertEquals(80,items[0].quality);
+        assertTrue(items[0].isQualityEqualTo(80));
     }
 
 }

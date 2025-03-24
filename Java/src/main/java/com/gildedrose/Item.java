@@ -7,7 +7,7 @@ public class Item {
 
     private int sellIn;
 
-    public int quality;
+    private int quality;
 
     public Item(String name, int sellIn, int quality) {
         this.name = name;
@@ -58,5 +58,9 @@ public class Item {
 
     public void reduceQualityToZero() {
         quality = 0;
+    }
+
+    public boolean isQualityEqualTo(int value){
+        return quality == value;
     }
 }
