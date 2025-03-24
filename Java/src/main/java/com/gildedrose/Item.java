@@ -55,4 +55,8 @@ public class Item {
     public void decreementSellIn() {
         sellIn = sellIn - 1;
     }
+
+    public void reduceQualityBy(int value) {
+        quality = quality - value;
+    }
 }
