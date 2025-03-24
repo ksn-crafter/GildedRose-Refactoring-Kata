@@ -3,11 +3,11 @@ package com.gildedrose;
 public class Item {
 
     //inappropriate intimacy
-    public String name;
+    private String name;
 
-    public int sellIn;
+    private int sellIn;
 
-    public int quality;
+    private int quality;
 
     public Item(String name, int sellIn, int quality) {
         this.name = name;
