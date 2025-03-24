@@ -37,7 +37,7 @@ class GildedRose {
             }
 
             if (!items[i].isSulfuras()) {
-                items[i].sellIn = items[i].sellIn - 1;
+                decreementSellIn(i);
             }
 
             if (items[i].isSellInLessThan(0)) {
@@ -58,6 +58,10 @@ class GildedRose {
                 }
             }
         }
+    }
+
+    private void decreementSellIn(int i) {
+        items[i].sellIn = items[i].sellIn - 1;
     }
 
 }
