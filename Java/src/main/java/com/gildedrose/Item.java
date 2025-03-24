@@ -27,4 +27,8 @@ public class Item {
     public boolean isBackstagePasses() {
         return name.equals("Backstage passes to a TAFKAL80ETC concert");
     }
+
+    public boolean isSulfuras() {
+        return name.equals("Sulfuras, Hand of Ragnaros");
+    }
 }

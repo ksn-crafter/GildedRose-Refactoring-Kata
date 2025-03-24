@@ -12,7 +12,7 @@ class GildedRose {
             if (!items[i].isAgedBrie()
                     && !items[i].isBackstagePasses()) {
                 if (items[i].quality > 0) {
-                    if (!isSulfuras(items[i])) {
+                    if (!items[i].isSulfuras()) {
                         items[i].quality = items[i].quality - 1;
                     }
                 }
@@ -36,7 +36,7 @@ class GildedRose {
                 }
             }
 
-            if (!isSulfuras(items[i])) {
+            if (!items[i].isSulfuras()) {
                 items[i].sellIn = items[i].sellIn - 1;
             }
 
@@ -44,7 +44,7 @@ class GildedRose {
                 if (!items[i].isAgedBrie()) {
                     if (!items[i].isBackstagePasses()) {
                         if (items[i].quality > 0) {
-                            if (!isSulfuras(items[i])) {
+                            if (!items[i].isSulfuras()) {
                                 items[i].quality = items[i].quality - 1;
                             }
                         }
@@ -58,10 +58,6 @@ class GildedRose {
                 }
             }
         }
-    }
-
-    private static boolean isSulfuras(Item item) {
-        return item.name.equals("Sulfuras, Hand of Ragnaros");
     }
 
 }
