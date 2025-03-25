@@ -21,7 +21,7 @@ class GildedRose {
                     items[i].increementQuality();
 
                     if (items[i].isBackstagePasses()) {
-                        increementQualityForBackstagePassess(items[i]);
+                        items[i].increementQualityForBackstagePassess();
                     }
                 }
             }
@@ -46,20 +46,6 @@ class GildedRose {
                         items[i].increementQuality();
                     }
                 }
-            }
-        }
-    }
-
-    public static void increementQualityForBackstagePassess(Item item) {
-        if (item.isSellInLessThan(11)) {
-            if (item.isQualityLessThanFifty()) {
-                item.increementQuality();
-            }
-        }
-
-        if (item.isSellInLessThan(6)) {
-            if (item.isQualityLessThanFifty()) {
-                item.increementQuality();
             }
         }
     }

@@ -62,4 +62,18 @@ public class Item {
     public boolean isQualityEqualTo(int value){
         return quality == value;
     }
+
+    public void increementQualityForBackstagePassess() {
+        if (isSellInLessThan(11)) {
+            if (isQualityLessThanFifty()) {
+                increementQuality();
+            }
+        }
+
+        if (isSellInLessThan(6)) {
+            if (isQualityLessThanFifty()) {
+                increementQuality();
+            }
+        }
+    }
 }
