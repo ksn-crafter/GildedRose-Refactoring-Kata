@@ -13,8 +13,7 @@ class GildedRoseTest {
             new AgedBrie(2, 0)
         };
         int days = 1;
-        GildedRose app = new GildedRose(items);
-
+        GildedRose app = new GildedRose(new Items(items));
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
@@ -24,7 +23,7 @@ class GildedRoseTest {
     @Test
     void qualityShouldDecreaseFromOneToZeroForNormalItemAfterADay(){
         Item[] items = new Item[]{  new Item("+5 Dexterity Vest", 10, 1)};
-        GildedRose app = new GildedRose(items);
+        GildedRose app = new GildedRose(new Items(items));
 
         int days = 1;
         for (int i = 0; i < days; i++) {
@@ -36,7 +35,7 @@ class GildedRoseTest {
     @Test
     void qualityShouldNotBeNegativeForNormalItemWithQualityZeroAfterADay(){
         Item[] items = new Item[]{  new Item("+5 Dexterity Vest", 10, 0)};
-        GildedRose app = new GildedRose(items);
+        GildedRose app = new GildedRose(new Items(items));
 
         int days = 1;
         for (int i = 0; i < days; i++) {
@@ -48,7 +47,7 @@ class GildedRoseTest {
     @Test
     void qualityShouldDegradeFromTwoToZeroForANormalItemPastItsSellByDate(){
         Item[] items = new Item[]{  new Item("+5 Dexterity Vest", 0, 2) };
-        GildedRose app = new GildedRose(items);
+        GildedRose app = new GildedRose(new Items(items));
 
         int days = 1;
         for (int i = 0; i < days; i++) {
@@ -60,7 +59,7 @@ class GildedRoseTest {
     @Test
     void qualityShouldNotIncreaseForAnyItemOverFifty(){
         Item[] items = new Item[]{  new AgedBrie(10, 50)};
-        GildedRose app = new GildedRose(items);
+        GildedRose app = new GildedRose(new Items(items));
 
         int days = 1;
         for (int i = 0; i < days; i++) {
@@ -72,7 +71,7 @@ class GildedRoseTest {
     @Test
     void qualityIncreasesByTwoForBackstagePassesWithLessThanTenSellinDays(){
         Item[] items = new Item[]{   new BackstagePasses("TAFKAL80ETC concert", 9, 20),};
-        GildedRose app = new GildedRose(items);
+        GildedRose app = new GildedRose(new Items(items));
 
         int days = 1;
         for (int i = 0; i < days; i++) {
@@ -84,7 +83,7 @@ class GildedRoseTest {
     @Test
     void qualityIncreasesByThreeForBackstagePassesWithLessThanFiveSellinDays(){
         Item[] items = new Item[]{   new BackstagePasses("TAFKAL80ETC concert", 4, 20),};
-        GildedRose app = new GildedRose(items);
+        GildedRose app = new GildedRose(new Items(items));
 
         int days = 1;
         for (int i = 0; i < days; i++) {
@@ -96,7 +95,7 @@ class GildedRoseTest {
     @Test
     void qualityDropToZeroForBackstagePassesAfterSellinDays(){
         Item[] items = new Item[]{   new BackstagePasses("TAFKAL80ETC concert", 0, 20),};
-        GildedRose app = new GildedRose(items);
+        GildedRose app = new GildedRose(new Items(items));
 
         int days = 1;
         for (int i = 0; i < days; i++) {
@@ -110,7 +109,7 @@ class GildedRoseTest {
         Item[] items = new Item[]{
             new Sulfuras( 0, 80), //
         };
-        GildedRose app = new GildedRose(items);
+        GildedRose app = new GildedRose(new Items(items));
 
         int days = 1;
         for (int i = 0; i < days; i++) {
@@ -124,7 +123,7 @@ class GildedRoseTest {
         Item[] items = new Item[]{
             new Sulfuras(2, 80), //
         };
-        GildedRose app = new GildedRose(items);
+        GildedRose app = new GildedRose(new Items(items));
 
         int days = 1;
         for (int i = 0; i < days; i++) {
@@ -136,7 +135,7 @@ class GildedRoseTest {
     @Test
     void sellInDecreasesForNonSulfurasItemAfterADay(){
         Item[] items = new Item[]{   new BackstagePasses("TAFKAL80ETC concert", 4, 20),};
-        GildedRose app = new GildedRose(items);
+        GildedRose app = new GildedRose(new Items(items));
 
         int days = 1;
         for (int i = 0; i < days; i++) {

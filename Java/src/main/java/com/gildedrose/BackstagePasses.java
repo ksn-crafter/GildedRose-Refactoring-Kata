@@ -10,7 +10,7 @@ public class BackstagePasses extends Item {
     }
 
     @Override
-    public void increementQuality(){
+    public void increementQuality() {
         super.increementQuality();
 
         if (isSellInLessThan(SELLIN_LIMIT_FOR_INCREASING_QUALITY_BY_TWO) && isQualityLessThanMaxPermissibleQuality()) {
