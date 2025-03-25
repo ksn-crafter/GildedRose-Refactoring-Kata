@@ -3,6 +3,7 @@ package com.gildedrose;
 public class Item {
 
     public static final int MAX_PERMISSIBLE_QUALITY = 50;
+    public static final int MIN_PERMISSIBLE_QUALITY = 0;
     private String name;
 
     private int sellIn;
@@ -21,7 +22,7 @@ public class Item {
     }
 
     private boolean isQualityGreaterThanZero() {
-        return quality > 0;
+        return quality > MIN_PERMISSIBLE_QUALITY;
     }
 
     private void decreementQuality() {
