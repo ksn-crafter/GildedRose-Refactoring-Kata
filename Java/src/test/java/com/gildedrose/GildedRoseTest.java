@@ -17,7 +17,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertTrue(items[0].isQualityEqualTo(1));
+        assertTrue(app.firstItem().isQualityEqualTo(1));
     }
 
     @Test
@@ -29,7 +29,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertTrue(items[0].isQualityEqualTo(0));
+        assertTrue(app.firstItem().isQualityEqualTo(0));
     }
 
     @Test
@@ -41,7 +41,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertTrue(items[0].isQualityEqualTo(0));
+        assertTrue(app.firstItem().isQualityEqualTo(0));
     }
 
     @Test
@@ -53,7 +53,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertTrue(items[0].isQualityEqualTo(0));
+        assertTrue(app.firstItem().isQualityEqualTo(0));
     }
 
     @Test
@@ -65,7 +65,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertTrue(items[0].isQualityEqualTo(50));
+        assertTrue(app.firstItem().isQualityEqualTo(50));
     }
 
     @Test
@@ -77,7 +77,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertTrue(items[0].isQualityEqualTo(22));
+        assertTrue(app.firstItem().isQualityEqualTo(22));
     }
 
     @Test
@@ -89,7 +89,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertTrue(items[0].isQualityEqualTo(23));
+        assertTrue(app.firstItem().isQualityEqualTo(23));
     }
 
     @Test
@@ -101,7 +101,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertTrue(items[0].isQualityEqualTo(0));
+        assertTrue(app.firstItem().isQualityEqualTo(0));
     }
 
     @Test
@@ -115,7 +115,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertTrue(items[0].isQualityEqualTo(80));
+        assertTrue(app.firstItem().isQualityEqualTo(80));
     }
 
     @Test
@@ -129,7 +129,7 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertTrue(items[0].isSellInEqualTo(2));
+        assertTrue(app.firstItem().isSellInEqualTo(2));
     }
 
     @Test
@@ -141,6 +141,6 @@ class GildedRoseTest {
         for (int i = 0; i < days; i++) {
             app.updateQuality();
         }
-        assertTrue(items[0].isSellInEqualTo(3));
+        assertTrue(app.firstItem().isSellInEqualTo(3));
     }
 }

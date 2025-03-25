@@ -1,10 +1,10 @@
 package com.gildedrose;
 
-public class Item {
+public class Item implements Cloneable {
 
     public static final int MAX_PERMISSIBLE_QUALITY = 50;
     public static final int MIN_PERMISSIBLE_QUALITY = 0;
-    private String name;
+    private final String name;
 
     private int sellIn;
 
@@ -75,5 +75,14 @@ public class Item {
         if (isSellInLessThan(0)) {
             decreaseQuality();
         }
+    }
+
+    @Override
+    public Item clone(){
+        if(name.equals("Aged Brie")) return new AgedBrie(sellIn,quality);
+        if(name.startsWith("Sulfuras")) return new Sulfuras(sellIn,quality);
+        if(name.startsWith("Backstage passes")) return new BackstagePasses(name.replace("Backstage passes to a",""),sellIn,quality);
+
+        return new Item(name,sellIn,quality);
     }
 }

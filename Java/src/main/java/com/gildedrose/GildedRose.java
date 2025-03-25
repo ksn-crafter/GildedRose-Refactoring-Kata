@@ -1,7 +1,7 @@
 package com.gildedrose;
 
 class GildedRose {
-    Items items;
+    private final Items items;
 
     public GildedRose(Items items) {
         this.items = items;
@@ -11,4 +11,7 @@ class GildedRose {
         items.forEach(Item::updateQuality);
     }
 
+    public Item firstItem(){
+        return items.firstItem();
+    }
 }
