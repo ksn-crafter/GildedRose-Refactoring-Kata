@@ -40,7 +40,7 @@ class GildedRose {
         }
     }
 
-    private void decreaseSellIn(Item item) {
+    private static void decreaseSellIn(Item item) {
         if (!item.isSulfuras()) {
             item.decreementSellIn();
         }
