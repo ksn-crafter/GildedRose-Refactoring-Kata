@@ -56,7 +56,7 @@ public class Item {
         return sellIn == value;
     }
 
-    protected void decreaseQuality() {
+    private void decreaseQuality() {
         if (isQualityGreaterThanZero()) {
             decreementQuality();
         }
