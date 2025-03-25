@@ -144,7 +144,4 @@ class GildedRoseTest {
         }
         assertTrue(items[0].isSellInEqualTo(3));
     }
-
-
-
 }
