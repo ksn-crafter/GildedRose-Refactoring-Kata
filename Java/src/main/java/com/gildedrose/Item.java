@@ -88,4 +88,35 @@ public class Item {
             decreementSellIn();
         }
     }
+
+    public void updateQuality() {
+        if (!isAgedBrie()
+                && !isBackstagePasses()) {
+            decreaseQuality();
+        } else {
+            if (isQualityLessThanFifty()) {
+                increementQuality();
+
+                if (isBackstagePasses()) {
+                    increementQualityForBackstagePassess();
+                }
+            }
+        }
+
+        decreaseSellIn();
+
+        if (isSellInLessThan(0)) {
+            if (!isAgedBrie()) {
+                if (!isBackstagePasses()) {
+                    decreaseQuality();
+                } else {
+                    reduceQualityToZero();
+                }
+            } else {
+                if (isQualityLessThanFifty()) {
+                    increementQuality();
+                }
+            }
+        }
+    }
 }
