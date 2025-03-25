@@ -19,10 +19,6 @@ public class Item {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 
-    private boolean isSulfuras() {
-        return name.equals("Sulfuras, Hand of Ragnaros");
-    }
-
     private boolean isQualityGreaterThanZero() {
         return quality > 0;
     }
@@ -67,7 +63,7 @@ public class Item {
     }
 
     protected void decreaseSellIn() {
-            decreementSellIn();
+        decreementSellIn();
     }
 
     public void updateQuality() {
