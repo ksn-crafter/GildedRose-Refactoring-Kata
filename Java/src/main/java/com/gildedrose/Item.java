@@ -78,10 +78,8 @@ public class Item {
     }
 
     public void decreaseQuality() {
-        if (isQualityGreaterThanZero()) {
-            if (!isSulfuras()) {
-                decreementQuality();
-            }
+        if (isQualityGreaterThanZero() && !isSulfuras()) {
+            decreementQuality();
         }
     }
 
