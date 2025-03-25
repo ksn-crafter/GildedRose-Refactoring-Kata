@@ -9,8 +9,8 @@ public class BackstagePasses extends Item {
         super(String.format("Backstage passes to a %s", eventName), sellIn, quality);
     }
 
-    @Override
-    public void increementQuality() {
+
+    public void increaseQuality() {
         super.increementQuality();
 
         if (isSellInLessThan(SELLIN_LIMIT_FOR_INCREASING_QUALITY_BY_TWO) && isQualityLessThanMaxPermissibleQuality()) {
@@ -25,7 +25,7 @@ public class BackstagePasses extends Item {
     @Override
     public void updateQuality() {
         if (isQualityLessThanMaxPermissibleQuality()) {
-            increementQuality();
+            increaseQuality();
         }
 
         decreaseSellIn();
