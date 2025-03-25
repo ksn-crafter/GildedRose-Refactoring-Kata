@@ -8,8 +8,6 @@ public class Sulfuras extends Item {
     @Override
     public void updateQuality() {
         decreaseQuality();
-        decreaseSellIn();
-
         if (isSellInLessThan(0)) {
             decreaseQuality();
         }
