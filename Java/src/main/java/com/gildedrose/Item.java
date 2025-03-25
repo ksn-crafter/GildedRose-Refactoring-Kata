@@ -76,4 +76,8 @@ public class Item {
             }
         }
     }
+
+    public boolean isSellInEqualTo(int value) {
+        return sellIn == value;
+    }
 }

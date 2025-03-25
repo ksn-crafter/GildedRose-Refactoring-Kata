@@ -119,4 +119,20 @@ class GildedRoseTest {
         assertTrue(items[0].isQualityEqualTo(80));
     }
 
+    @Test
+    void sellInDoesNotDecreaseForSulfurasItemAfterADay(){
+        Item[] items = new Item[]{
+            new Item("Sulfuras, Hand of Ragnaros", 2, 80), //
+        };
+        GildedRose app = new GildedRose(items);
+
+        int days = 1;
+        for (int i = 0; i < days; i++) {
+            app.updateQuality();
+        }
+        assertTrue(items[0].isSellInEqualTo(2));
+    }
+
+
+
 }
