@@ -88,4 +88,10 @@ public class Item {
             }
         }
     }
+
+    public void decreaseSellIn() {
+        if (!isSulfuras()) {
+            decreementSellIn();
+        }
+    }
 }
