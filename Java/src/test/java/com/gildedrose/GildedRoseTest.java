@@ -10,7 +10,7 @@ class GildedRoseTest {
     @Test
     void qualityShouldIncreaseFromZeroToOneForAgedBrieAfterADay(){
         Item[] items = new Item[] {
-            new Item("Aged Brie", 2, 0)
+            new AgedBrie(2, 0)
         };
         int days = 1;
         GildedRose app = new GildedRose(items);
@@ -59,7 +59,7 @@ class GildedRoseTest {
 
     @Test
     void qualityShouldNotIncreaseForAnyItemOverFifty(){
-        Item[] items = new Item[]{  new Item("Aged Brie", 10, 50)};
+        Item[] items = new Item[]{  new AgedBrie(10, 50)};
         GildedRose app = new GildedRose(items);
 
         int days = 1;
@@ -71,7 +71,7 @@ class GildedRoseTest {
 
     @Test
     void qualityIncreasesByTwoForBackstagePassesWithLessThanTenSellinDays(){
-        Item[] items = new Item[]{   new Item("Backstage passes to a TAFKAL80ETC concert", 9, 20),};
+        Item[] items = new Item[]{   new BackstagePasses("TAFKAL80ETC concert", 9, 20),};
         GildedRose app = new GildedRose(items);
 
         int days = 1;
@@ -83,7 +83,7 @@ class GildedRoseTest {
 
     @Test
     void qualityIncreasesByThreeForBackstagePassesWithLessThanFiveSellinDays(){
-        Item[] items = new Item[]{   new Item("Backstage passes to a TAFKAL80ETC concert", 4, 20),};
+        Item[] items = new Item[]{   new BackstagePasses("TAFKAL80ETC concert", 4, 20),};
         GildedRose app = new GildedRose(items);
 
         int days = 1;
@@ -95,7 +95,7 @@ class GildedRoseTest {
 
     @Test
     void qualityDropToZeroForBackstagePassesAfterSellinDays(){
-        Item[] items = new Item[]{   new Item("Backstage passes to a TAFKAL80ETC concert", 0, 20),};
+        Item[] items = new Item[]{   new BackstagePasses("TAFKAL80ETC concert", 0, 20),};
         GildedRose app = new GildedRose(items);
 
         int days = 1;
@@ -108,7 +108,7 @@ class GildedRoseTest {
     @Test
     void qualityDoesNotDecreaseForSulfurasItemAfterADay(){
         Item[] items = new Item[]{
-            new Item("Sulfuras, Hand of Ragnaros", 0, 80), //
+            new Sulfuras( 0, 80), //
         };
         GildedRose app = new GildedRose(items);
 
@@ -122,7 +122,7 @@ class GildedRoseTest {
     @Test
     void sellInDoesNotDecreaseForSulfurasItemAfterADay(){
         Item[] items = new Item[]{
-            new Item("Sulfuras, Hand of Ragnaros", 2, 80), //
+            new Sulfuras(2, 80), //
         };
         GildedRose app = new GildedRose(items);
 
@@ -135,7 +135,7 @@ class GildedRoseTest {
 
     @Test
     void sellInDecreasesForNonSulfurasItemAfterADay(){
-        Item[] items = new Item[]{   new Item("Backstage passes to a TAFKAL80ETC concert", 4, 20),};
+        Item[] items = new Item[]{   new BackstagePasses("TAFKAL80ETC concert", 4, 20),};
         GildedRose app = new GildedRose(items);
 
         int days = 1;
