@@ -90,33 +90,11 @@ public class Item {
     }
 
     public void updateQuality() {
-        if (!isAgedBrie()
-                && !isBackstagePasses()) {
-            decreaseQuality();
-        } else {
-            if (isQualityLessThanFifty()) {
-                increementQuality();
-
-                if (isBackstagePasses()) {
-                    increementQualityForBackstagePassess();
-                }
-            }
-        }
-
+        decreaseQuality();
         decreaseSellIn();
 
         if (isSellInLessThan(0)) {
-            if (!isAgedBrie()) {
-                if (!isBackstagePasses()) {
-                    decreaseQuality();
-                } else {
-                    reduceQualityToZero();
-                }
-            } else {
-                if (isQualityLessThanFifty()) {
-                    increementQuality();
-                }
-            }
+            decreaseQuality();
         }
     }
 }
