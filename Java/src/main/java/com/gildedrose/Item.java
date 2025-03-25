@@ -63,7 +63,7 @@ public class Item {
         return quality == value;
     }
 
-    private void increementQualityForBackstagePassess() {
+    protected void increementQualityForBackstagePassess() {
         if (isSellInLessThan(11) && isQualityLessThanFifty()) {
             increementQuality();
         }
