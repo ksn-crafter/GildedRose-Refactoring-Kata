@@ -19,7 +19,7 @@ public class Item {
     }
 
     @Override
-   public String toString() {
+    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 
@@ -59,21 +59,17 @@ public class Item {
         quality = 0;
     }
 
-    public boolean isQualityEqualTo(int value){
+    public boolean isQualityEqualTo(int value) {
         return quality == value;
     }
 
     public void increementQualityForBackstagePassess() {
-        if (isSellInLessThan(11)) {
-            if (isQualityLessThanFifty()) {
-                increementQuality();
-            }
+        if (isSellInLessThan(11) && isQualityLessThanFifty()) {
+            increementQuality();
         }
 
-        if (isSellInLessThan(6)) {
-            if (isQualityLessThanFifty()) {
-                increementQuality();
-            }
+        if (isSellInLessThan(6) && isQualityLessThanFifty()) {
+            increementQuality();
         }
     }
 
