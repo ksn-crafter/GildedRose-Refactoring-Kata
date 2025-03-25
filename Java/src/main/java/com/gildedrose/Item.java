@@ -21,7 +21,7 @@ public class Item {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 
-    private boolean isQualityGreaterThanZero() {
+    private boolean isQualityGreaterThanMinPermissibleQuality() {
         return quality > MIN_PERMISSIBLE_QUALITY;
     }
 
@@ -59,7 +59,7 @@ public class Item {
     }
 
     private void decreaseQuality() {
-        if (isQualityGreaterThanZero()) {
+        if (isQualityGreaterThanMinPermissibleQuality()) {
             decreementQuality();
         }
     }
