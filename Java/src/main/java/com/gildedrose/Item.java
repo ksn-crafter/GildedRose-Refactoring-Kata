@@ -14,7 +14,7 @@ public class Item {
         this.quality = quality;
     }
 
-    public boolean isAgedBrie() {
+    private boolean isAgedBrie() {
         return name.equals("Aged Brie");
     }
 
@@ -23,39 +23,39 @@ public class Item {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 
-    public boolean isBackstagePasses() {
+    private boolean isBackstagePasses() {
         return name.equals("Backstage passes to a TAFKAL80ETC concert");
     }
 
-    public boolean isSulfuras() {
+    private boolean isSulfuras() {
         return name.equals("Sulfuras, Hand of Ragnaros");
     }
 
-    public boolean isQualityGreaterThanZero() {
+    private boolean isQualityGreaterThanZero() {
         return quality > 0;
     }
 
-    public void decreementQuality() {
+    private void decreementQuality() {
         quality = quality - 1;
     }
 
-    public boolean isQualityLessThanFifty() {
+    private boolean isQualityLessThanFifty() {
         return quality < 50;
     }
 
-    public void increementQuality() {
+    private void increementQuality() {
         quality = quality + 1;
     }
 
-    public boolean isSellInLessThan(int value) {
+    private boolean isSellInLessThan(int value) {
         return sellIn < value;
     }
 
-    public void decreementSellIn() {
+    private void decreementSellIn() {
         sellIn = sellIn - 1;
     }
 
-    public void reduceQualityToZero() {
+    private void reduceQualityToZero() {
         quality = 0;
     }
 
@@ -63,7 +63,7 @@ public class Item {
         return quality == value;
     }
 
-    public void increementQualityForBackstagePassess() {
+    private void increementQualityForBackstagePassess() {
         if (isSellInLessThan(11) && isQualityLessThanFifty()) {
             increementQuality();
         }
@@ -77,13 +77,13 @@ public class Item {
         return sellIn == value;
     }
 
-    public void decreaseQuality() {
+    private void decreaseQuality() {
         if (isQualityGreaterThanZero() && !isSulfuras()) {
             decreementQuality();
         }
     }
 
-    public void decreaseSellIn() {
+    private void decreaseSellIn() {
         if (!isSulfuras()) {
             decreementSellIn();
         }
