@@ -14,17 +14,9 @@ public class Item {
         this.quality = quality;
     }
 
-    protected boolean isAgedBrie() {
-        return name.equals("Aged Brie");
-    }
-
     @Override
     public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
-    }
-
-    protected boolean isBackstagePasses() {
-        return name.equals("Backstage passes to a TAFKAL80ETC concert");
     }
 
     private boolean isSulfuras() {
@@ -63,15 +55,6 @@ public class Item {
         return quality == value;
     }
 
-    protected void increementQualityForBackstagePassess() {
-        if (isSellInLessThan(11) && isQualityLessThanFifty()) {
-            increementQuality();
-        }
-
-        if (isSellInLessThan(6) && isQualityLessThanFifty()) {
-            increementQuality();
-        }
-    }
 
     public boolean isSellInEqualTo(int value) {
         return sellIn == value;
