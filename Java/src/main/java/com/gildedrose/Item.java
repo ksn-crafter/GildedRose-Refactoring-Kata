@@ -14,7 +14,7 @@ public class Item {
         this.quality = quality;
     }
 
-    private boolean isAgedBrie() {
+    protected boolean isAgedBrie() {
         return name.equals("Aged Brie");
     }
 
@@ -23,7 +23,7 @@ public class Item {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 
-    private boolean isBackstagePasses() {
+    protected boolean isBackstagePasses() {
         return name.equals("Backstage passes to a TAFKAL80ETC concert");
     }
 
@@ -39,15 +39,15 @@ public class Item {
         quality = quality - 1;
     }
 
-    private boolean isQualityLessThanFifty() {
+    protected boolean isQualityLessThanFifty() {
         return quality < 50;
     }
 
-    private void increementQuality() {
+    protected void increementQuality() {
         quality = quality + 1;
     }
 
-    private boolean isSellInLessThan(int value) {
+    protected boolean isSellInLessThan(int value) {
         return sellIn < value;
     }
 
@@ -55,7 +55,7 @@ public class Item {
         sellIn = sellIn - 1;
     }
 
-    private void reduceQualityToZero() {
+    protected void reduceQualityToZero() {
         quality = 0;
     }
 
@@ -77,13 +77,13 @@ public class Item {
         return sellIn == value;
     }
 
-    private void decreaseQuality() {
+    protected void decreaseQuality() {
         if (isQualityGreaterThanZero() && !isSulfuras()) {
             decreementQuality();
         }
     }
 
-    private void decreaseSellIn() {
+    protected void decreaseSellIn() {
         if (!isSulfuras()) {
             decreementSellIn();
         }
