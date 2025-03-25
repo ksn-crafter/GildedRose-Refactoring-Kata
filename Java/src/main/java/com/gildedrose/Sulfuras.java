@@ -7,9 +7,7 @@ public class Sulfuras extends Item {
 
     @Override
     public void updateQuality() {
-        decreaseQuality();
-        if (isSellInLessThan(0)) {
-            decreaseQuality();
-        }
+        //We should neither decrease quality nor decrease the sellin date for sulfuras
+        //So do nothing here, and leave the implementation empty for updateQuality()
     }
 }
