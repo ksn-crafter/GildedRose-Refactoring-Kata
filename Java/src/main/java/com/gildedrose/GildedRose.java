@@ -42,7 +42,7 @@ class GildedRose {
         }
     }
 
-    private void decreaseQuality(Item item) {
+    private static void decreaseQuality(Item item) {
         if (item.isQualityGreaterThanZero()) {
             if (!item.isSulfuras()) {
                 item.decreementQuality();
