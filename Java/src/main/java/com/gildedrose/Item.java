@@ -67,9 +67,7 @@ public class Item {
     }
 
     protected void decreaseSellIn() {
-        if (!isSulfuras()) {
             decreementSellIn();
-        }
     }
 
     public void updateQuality() {
