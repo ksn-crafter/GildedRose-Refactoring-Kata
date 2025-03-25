@@ -133,6 +133,18 @@ class GildedRoseTest {
         assertTrue(items[0].isSellInEqualTo(2));
     }
 
+    @Test
+    void sellInDecreasesForNonSulfurasItemAfterADay(){
+        Item[] items = new Item[]{   new Item("Backstage passes to a TAFKAL80ETC concert", 4, 20),};
+        GildedRose app = new GildedRose(items);
+
+        int days = 1;
+        for (int i = 0; i < days; i++) {
+            app.updateQuality();
+        }
+        assertTrue(items[0].isSellInEqualTo(3));
+    }
+
 
 
 }
