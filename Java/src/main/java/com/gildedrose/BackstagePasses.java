@@ -9,10 +9,7 @@ public class BackstagePasses extends Item {
     public void updateQuality() {
         if (isQualityLessThanFifty()) {
             increementQuality();
-
-            if (isBackstagePasses()) {
-                increementQualityForBackstagePassess();
-            }
+            increementQualityForBackstagePassess();
         }
 
         decreaseSellIn();
