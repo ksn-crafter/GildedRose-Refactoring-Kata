@@ -28,7 +28,7 @@ public class Item {
         quality = quality - 1;
     }
 
-    protected boolean isQualityLessThanFifty() {
+    protected boolean isQualityLessThanMaxPermissibleQuality() {
         return quality < MAX_PERMISSIBLE_QUALITY;
     }
 

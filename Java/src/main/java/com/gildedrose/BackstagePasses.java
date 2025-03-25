@@ -9,18 +9,18 @@ public class BackstagePasses extends Item {
     public void increementQuality(){
         super.increementQuality();
 
-        if (isSellInLessThan(11) && isQualityLessThanFifty()) {
+        if (isSellInLessThan(11) && isQualityLessThanMaxPermissibleQuality()) {
             super.increementQuality();
         }
 
-        if (isSellInLessThan(6) && isQualityLessThanFifty()) {
+        if (isSellInLessThan(6) && isQualityLessThanMaxPermissibleQuality()) {
             super.increementQuality();
         }
     }
 
     @Override
     public void updateQuality() {
-        if (isQualityLessThanFifty()) {
+        if (isQualityLessThanMaxPermissibleQuality()) {
             increementQuality();
         }
 

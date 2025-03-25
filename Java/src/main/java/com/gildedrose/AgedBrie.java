@@ -7,13 +7,13 @@ public class AgedBrie extends Item {
 
     @Override
     public void updateQuality() {
-        if (isQualityLessThanFifty()) {
+        if (isQualityLessThanMaxPermissibleQuality()) {
             increementQuality();
         }
 
         decreaseSellIn();
 
-        if (isSellInLessThan(0) && isQualityLessThanFifty()) {
+        if (isSellInLessThan(0) && isQualityLessThanMaxPermissibleQuality()) {
             increementQuality();
         }
     }
