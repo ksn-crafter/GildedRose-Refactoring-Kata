@@ -80,4 +80,12 @@ public class Item {
     public boolean isSellInEqualTo(int value) {
         return sellIn == value;
     }
+
+    public void decreaseQuality() {
+        if (isQualityGreaterThanZero()) {
+            if (!isSulfuras()) {
+                decreementQuality();
+            }
+        }
+    }
 }
