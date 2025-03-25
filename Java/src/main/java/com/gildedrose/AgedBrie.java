@@ -13,10 +13,8 @@ public class AgedBrie extends Item {
 
         decreaseSellIn();
 
-        if (isSellInLessThan(0)) {
-            if (isQualityLessThanFifty()) {
-                increementQuality();
-            }
+        if (isSellInLessThan(0) && isQualityLessThanFifty()) {
+            increementQuality();
         }
     }
 }
