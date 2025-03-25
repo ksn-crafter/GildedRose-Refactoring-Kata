@@ -50,7 +50,7 @@ class GildedRose {
         }
     }
 
-    private static void increementQualityForBackstagePassess(Item item) {
+    public static void increementQualityForBackstagePassess(Item item) {
         if (item.isSellInLessThan(11)) {
             if (item.isQualityLessThanFifty()) {
                 item.increementQuality();
