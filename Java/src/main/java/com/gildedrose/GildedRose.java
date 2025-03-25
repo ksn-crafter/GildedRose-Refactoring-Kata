@@ -13,7 +13,7 @@ class GildedRose {
         }
     }
 
-    private void updateQuality(Item item) {
+    private static void updateQuality(Item item) {
         if (!item.isAgedBrie()
                 && !item.isBackstagePasses()) {
             item.decreaseQuality();
