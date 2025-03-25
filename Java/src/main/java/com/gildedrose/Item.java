@@ -2,6 +2,7 @@ package com.gildedrose;
 
 public class Item {
 
+    public static final int MAX_PERMISSIBLE_QUALITY = 50;
     private String name;
 
     private int sellIn;
@@ -28,7 +29,7 @@ public class Item {
     }
 
     protected boolean isQualityLessThanFifty() {
-        return quality < 50;
+        return quality < MAX_PERMISSIBLE_QUALITY;
     }
 
     protected void increementQuality() {
