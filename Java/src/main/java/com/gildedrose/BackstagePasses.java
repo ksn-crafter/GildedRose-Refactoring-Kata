@@ -6,10 +6,22 @@ public class BackstagePasses extends Item {
     }
 
     @Override
+    public void increementQuality(){
+        super.increementQuality();
+
+        if (isSellInLessThan(11) && isQualityLessThanFifty()) {
+            super.increementQuality();
+        }
+
+        if (isSellInLessThan(6) && isQualityLessThanFifty()) {
+            super.increementQuality();
+        }
+    }
+
+    @Override
     public void updateQuality() {
         if (isQualityLessThanFifty()) {
             increementQuality();
-            increementQualityForBackstagePassess();
         }
 
         decreaseSellIn();
