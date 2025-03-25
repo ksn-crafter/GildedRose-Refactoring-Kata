@@ -9,32 +9,36 @@ class GildedRose {
 
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
-            if (!items[i].isAgedBrie()
-                    && !items[i].isBackstagePasses()) {
-                items[i].decreaseQuality();
-            } else {
-                if (items[i].isQualityLessThanFifty()) {
-                    items[i].increementQuality();
+            updateQuality(items[i]);
+        }
+    }
 
-                    if (items[i].isBackstagePasses()) {
-                        items[i].increementQualityForBackstagePassess();
-                    }
+    private void updateQuality(Item item) {
+        if (!item.isAgedBrie()
+                && !item.isBackstagePasses()) {
+            item.decreaseQuality();
+        } else {
+            if (item.isQualityLessThanFifty()) {
+                item.increementQuality();
+
+                if (item.isBackstagePasses()) {
+                    item.increementQualityForBackstagePassess();
                 }
             }
+        }
 
-            items[i].decreaseSellIn();
+        item.decreaseSellIn();
 
-            if (items[i].isSellInLessThan(0)) {
-                if (!items[i].isAgedBrie()) {
-                    if (!items[i].isBackstagePasses()) {
-                        items[i].decreaseQuality();
-                    } else {
-                        items[i].reduceQualityToZero();
-                    }
+        if (item.isSellInLessThan(0)) {
+            if (!item.isAgedBrie()) {
+                if (!item.isBackstagePasses()) {
+                    item.decreaseQuality();
                 } else {
-                    if (items[i].isQualityLessThanFifty()) {
-                        items[i].increementQuality();
-                    }
+                    item.reduceQualityToZero();
+                }
+            } else {
+                if (item.isQualityLessThanFifty()) {
+                    item.increementQuality();
                 }
             }
         }
