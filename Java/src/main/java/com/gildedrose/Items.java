@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
 
-public class Items {
+class Items {
     private final Item[] items;
 
     public Items(Item[] items) {

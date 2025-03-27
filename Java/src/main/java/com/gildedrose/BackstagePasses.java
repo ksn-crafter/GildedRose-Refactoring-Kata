@@ -10,7 +10,7 @@ public class BackstagePasses extends Item {
     }
 
 
-    public void increaseQuality() {
+    private void increaseQuality() {
         super.increementQuality();
 
         if (isSellInLessThan(SELLIN_LIMIT_FOR_INCREASING_QUALITY_BY_TWO) && isQualityLessThanMaxPermissibleQuality()) {
