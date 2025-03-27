@@ -13,7 +13,7 @@ class Items {
     }
 
     public void forEach(Consumer<? super Item> action) {
-        Objects.requireNonNull(action);
+        if(items == null) return;
         for (Item t : items) {
             action.accept(t);
         }
