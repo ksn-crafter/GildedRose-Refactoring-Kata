@@ -67,7 +67,8 @@ public class Item {
     protected void decreaseSellIn() {
         decreementSellIn();
     }
-
+    //TODO: we are updating sellIn in a method called updatedQuality
+    //rethink this implementation
     public void updateQuality() {
         decreaseQuality();
         decreaseSellIn();
