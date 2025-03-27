@@ -17,6 +17,9 @@ class Items {
         }
     }
 
+    //TODO: this only works because in test cases we are using first item for testing
+    //had there been a much more comprehensive test suite, we would have to expose
+    //an iterator that returns a deep copy of the object
     public Item firstItem(){
         return items[0].clone();
     }

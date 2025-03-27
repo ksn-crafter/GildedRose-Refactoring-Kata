@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class Item {
+public class Item implements Cloneable {
 
     public static final int MAX_PERMISSIBLE_QUALITY = 50;
     public static final int MIN_PERMISSIBLE_QUALITY = 0;
